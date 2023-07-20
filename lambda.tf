@@ -26,7 +26,7 @@ data "archive_file" "python_lambda_package" {
 }
 
 resource "aws_lambda_function" "hello_lambda" {
-  function_name    = "${var.your_name}-lambda-apigw"
+  function_name    = "${var.pglim360}-lambda-apigw"
   filename         = "lambda.zip"
   source_code_hash = data.archive_file.python_lambda_package.output_base64sha256
   role             = aws_iam_role.lambda_role.arn
