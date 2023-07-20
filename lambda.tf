@@ -15,7 +15,7 @@ resource "aws_iam_role_policy_attachment" "terraform_lambda_policy" {
 }
 
 resource "aws_iam_role" "lambda_role" {
-  name               = "${var.your_name}-lambda-hw-role"
+  name               = "${var.pglim360}-lambda-hw-role"
   assume_role_policy = data.aws_iam_policy_document.lambda_assume_role_policy.json
 }
 
